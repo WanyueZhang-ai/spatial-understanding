@@ -68,9 +68,6 @@ This directory contains positional encoding modifications for comparative experi
 - multi_image_qwen.py: Related to multi-image processing under the Qwen2.5-vl model architecture.
 - single_image_qwen.py: Related to single-image processing under the Qwen2.5-vl model architecture.
 
-![Dataset Overview](images/MulSeT_dataset_overview.png)
-*A high-level overview of MulSeT.
-
 ## Data-Centric​
 This directory is designed to verify the impact of increasing data volume on model performance, with subdirectories for different data types and corresponding example scripts.​
 
@@ -80,8 +77,9 @@ This directory is designed to verify the impact of increasing data volume on mod
 2. video
 - run_space.sh: An example script for video data, serving to handle or make use of video datasets to study how video data volume influences model performance.
 
-![attention_visualize](images/attention_visualize.png)
-*Case study of attention visualization. Each column corresponds to a pair of input images (left and right), and each row shows the attention maps from the 21st and 27th layers of the model, respectively.
+
+![Dataset Overview](images/MulSeT_dataset_overview.png)
+*A high-level overview of MulSeT.
 
 ## Visualization Scripts (visualize folder)​
 This directory contains scripts for visualizing the attention distribution of models, helping to understand the attention focus of models in different scenarios intuitively.
@@ -98,3 +96,7 @@ This directory contains scripts for visualizing the attention distribution of mo
 - visualize_2images_qwen2.5_attention_Explicit-Stepwise-CoT.py: Visualizes attention for Qwen2.5-VL using the "Explicit Stepwise Chain-of-Thought" approach, highlighting how attention shifts during sequential reasoning over two images.
 - visualize_2images_qwen2.5_attention_Implicit-Multi-view.py: Shows attention distributions for Qwen2.5-VL under "Implicit Multi-view" processing, where cross-image reasoning occurs without explicit step-by-step prompts.
 - visualize_2images_qwen2.5_attention_Implicit-Stepwise.py: Visualizes attention for Qwen2.5-VL using "Implicit Stepwise" processing, illustrating gradual attention shifts during implicit reasoning over two images.
+
+![attention_visualize](images/attention_visualize.png)
+*Case study of attention visualization. Each column corresponds to a pair of input images (left and right), and each row shows the attention maps from the 21st and 27th layers of the model, respectively.
+
