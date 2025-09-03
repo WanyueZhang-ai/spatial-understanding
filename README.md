@@ -1,5 +1,7 @@
 # Why Do MLLMs Struggle with Spatial Understanding? A Systematic Analysis from Data to Architecture
+
 Our paper: https://arxiv.org/abs/2509.02359
+
 MulSeT Benchmark: https://huggingface.co/datasets/WanyueZhang/MulSeT
 
 ## Directory structure
@@ -39,7 +41,10 @@ MulSeT Benchmark: https://huggingface.co/datasets/WanyueZhang/MulSeT
 ```
 
 ## Document Description
-This supplementary materials package encompasses modifications for comparative experiments, data-related scripts, and attention visualization tools, structured as follows:
+This code package encompasses modifications for comparative experiments, data-related scripts, and attention visualization tools, structured as follows:
+
+![Overview](images/overview.png)
+*Overview of our study on spatial reasoning in MLLMs. The terms t, x, y, h, and w denote different dimensions of position embeddings.
 
 ### Architecture-Centric​
 
@@ -63,6 +68,9 @@ This directory contains positional encoding modifications for comparative experi
 - multi_image_qwen.py: Related to multi-image processing under the Qwen2.5-vl model architecture.
 - single_image_qwen.py: Related to single-image processing under the Qwen2.5-vl model architecture.
 
+![Dataset Overview](images/MulSeT_dataset_overview.png)
+*A high-level overview of MulSeT.
+
 ## Data-Centric​
 This directory is designed to verify the impact of increasing data volume on model performance, with subdirectories for different data types and corresponding example scripts.​
 
@@ -72,8 +80,11 @@ This directory is designed to verify the impact of increasing data volume on mod
 2. video
 - run_space.sh: An example script for video data, serving to handle or make use of video datasets to study how video data volume influences model performance.
 
+![attention_visualize](images/attention_visualize.png)
+*Case study of attention visualization. Each column corresponds to a pair of input images (left and right), and each row shows the attention maps from the 21st and 27th layers of the model, respectively.
+
 ## Visualization Scripts (visualize folder)​
-This directory contains scripts for visualizing the attention distribution of models, helping to intuitively understand the attention focus of models in different scenarios.
+This directory contains scripts for visualizing the attention distribution of models, helping to understand the attention focus of models in different scenarios intuitively.
 
 1. singe_image
 - visualize_1image_llavaov_attention.py: Shows llava-onevision-qwen2-7b-ov's single-image attention distribution.​
